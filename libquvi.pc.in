@@ -8,4 +8,5 @@ URL: http://quvi.sourceforge.net/
 Description: Query media library for Youtube like websites
 Version: @VERSION@
 Libs: -L${libdir} -lquvi
+Libs.Private: @liblua_LIBS@ @libcurl_LIBS@
 Cflags: -I${includedir}
