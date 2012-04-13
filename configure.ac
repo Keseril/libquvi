@@ -58,6 +58,12 @@ scriptsdir=`$PKG_CONFIG --variable scriptsdir libquvi-scripts 2>/dev/null`
 versionfile=`$PKG_CONFIG --variable versionfile libquvi-scripts 2>/dev/null`
 scriptsmodver=`$PKG_CONFIG --modversion libquvi-scripts 2>/dev/null`
 
+AC_ARG_WITH([scriptsdir],
+    [AS_HELP_STRING([--with-scriptsdir=DIR],
+    [Where to search for lua scripts at runtime])],
+    [scriptsdir=$withval]
+)
+
 AS_IF([test -z "$scriptsdir"], [
   AC_MSG_ERROR([libquvi-scripts.pc: scriptsdir: variable not found])])
 
