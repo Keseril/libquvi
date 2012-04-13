@@ -111,8 +111,6 @@ AC_TYPE_SIZE_T
 
 # Checks for library functions.
 AC_CHECK_FUNCS([getcwd memset strdup strerror strrchr strstr])
-AC_FUNC_REALLOC
-AC_FUNC_MALLOC
 
 have_asprintf=no
 AC_CHECK_FUNCS([vasprintf], [
