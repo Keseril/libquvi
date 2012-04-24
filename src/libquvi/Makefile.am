@@ -37,7 +37,6 @@ libquvi_la_CFLAGS=\
 libquvi_la_LDFLAGS=\
  $(libcurl_LIBS) \
  $(liblua_LIBS) \
- $(LIBICONV) \
  $(LTLIBICONV) \
  -version-info $(LIBQUVI_CURRENT):$(LIBQUVI_REVISION):$(LIBQUVI_AGE) \
  $(AM_LDFLAGS)
