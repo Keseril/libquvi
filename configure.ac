@@ -31,15 +31,17 @@ AC_DEFINE_UNQUOTED([CANONICAL_HOST], "$host", [...])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign dist-bzip2 dist-xz])
 AM_SILENT_RULES([yes])
 
-LT_INIT()
-LT_PREREQ([2.2])
-
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_CC_C_O
+AM_PROG_AR
 
 AC_PATH_PROGS([ND], [naturaldocs NaturalDocs], [],
   [$ND_PATH$PATH_SEPARATOR$PATH])
 AM_CONDITIONAL([HAVE_ND], [test -n "$ND"])
+
+LT_INIT()
+LT_PREREQ([2.2])
 
 # Checks for libraries.
 PKG_CHECK_MODULES([liblua], [lua >= 5.1], [], [
